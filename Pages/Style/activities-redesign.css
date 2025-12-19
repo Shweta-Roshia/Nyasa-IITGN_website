@@ -1,0 +1,548 @@
+/* ============================================
+   ACTIVITIES REDESIGN - RESPONSIVE STYLES
+   ============================================ */
+
+:root {
+  --primary-color: #3b82f6;
+  --primary-dark: #1e40af;
+  --primary-light: #dbeafe;
+  --secondary-color: #10b981;
+  --neutral-dark: #1f2937;
+  --neutral-light: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-radius: 0.75rem;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============ UPCOMING SLIDER STYLES ============ */
+
+.upcoming-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.upcoming-slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .upcoming-slider {
+    height: 300px;
+  }
+}
+
+.upcoming-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.upcoming-slide.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+.upcoming-slide img {
+  display: block;
+}
+
+/* Slider Navigation Arrows */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--neutral-dark);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .slider-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.slider-arrow:hover {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+}
+
+.slider-prev {
+  left: 20px;
+}
+
+.slider-next {
+  right: 20px;
+}
+
+.slider-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Slider Indicators */
+.slider-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 20;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.indicator.active {
+  background: white;
+  width: 32px;
+  border-radius: 6px;
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* ============ PROGRAM CARDS ============ */
+
+.program-card {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.program-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+}
+
+.program-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+@media (max-width: 640px) {
+  .program-image-container {
+    height: 200px;
+  }
+}
+
+.program-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.program-card:hover .program-image {
+  transform: scale(1.1);
+}
+
+.program-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.program-card:hover .program-image-overlay {
+  opacity: 1;
+}
+
+.program-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 640px) {
+  .program-content {
+    padding: 1rem;
+  }
+}
+
+.program-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.program-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+/* ============ YEAR DROPDOWN ============ */
+
+.program-dropdown {
+  position: relative;
+  margin-top: auto;
+}
+
+.dropdown-trigger {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition-smooth);
+}
+
+.dropdown-trigger:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.dropdown-trigger svg {
+  width: 18px;
+  height: 18px;
+  transition: var(--transition-smooth);
+}
+
+.dropdown-trigger.active svg {
+  transform: rotate(180deg);
+}
+
+.year-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid var(--primary-light);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  z-index: 100;
+}
+
+.year-dropdown-menu.active {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.year-option {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  border-bottom: 1px solid var(--neutral-light);
+}
+
+.year-option:last-child {
+  border-bottom: none;
+}
+
+.year-option:hover {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  padding-left: 1.5rem;
+}
+
+/* ============ YEAR CONTENT SLIDER ============ */
+
+.year-content {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--neutral-light);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 600px;
+  }
+}
+
+.year-content.hidden {
+  display: none;
+}
+
+.year-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.year-slider {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--neutral-light);
+}
+
+@media (max-width: 640px) {
+  .year-slider {
+    height: 180px;
+  }
+}
+
+.year-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.year-slide.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+.year-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.year-slider-controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.year-slider-btn {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.year-slider-btn.active {
+  background: var(--primary-color);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.year-slider-btn:hover {
+  background: var(--primary-color);
+}
+
+.year-description {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background: var(--neutral-light);
+  border-left: 4px solid var(--primary-color);
+  border-radius: 0.25rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* ============ ACTIVITY CARDS (PAST ACTIVITIES) ============ */
+
+.activity-card {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.activity-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+}
+
+.activity-image {
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+@media (max-width: 640px) {
+  .activity-image {
+    height: 200px;
+  }
+}
+
+.activity-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.activity-card:hover .activity-image img {
+  transform: scale(1.1);
+}
+
+.activity-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 640px) {
+  .activity-body {
+    padding: 1rem;
+  }
+}
+
+.activity-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.activity-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.activity-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.activity-tag {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ============ RESPONSIVE ADJUSTMENTS ============ */
+
+@media (max-width: 640px) {
+  .program-card,
+  .activity-card {
+    border-radius: 0.5rem;
+  }
+
+  .program-title,
+  .activity-title {
+    font-size: 1.1rem;
+  }
+
+  .program-description,
+  .activity-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* ============ UTILITY CLASSES ============ */
+
+.hidden {
+  display: none;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============ ANIMATIONS ============ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Scrollbar styling for year-dropdown-menu */
+.year-dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.year-dropdown-menu::-webkit-scrollbar-track {
+  background: var(--neutral-light);
+  border-radius: 3px;
+}
+
+.year-dropdown-menu::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 3px;
+}
+
+.year-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}

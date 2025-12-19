@@ -1,0 +1,392 @@
+<html data-theme="winter">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link href="built_styles.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="Style/activities-redesign.css">
+
+  <title>Nyasa | Activities</title>
+</head>
+
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <!-- ============ HERO SECTION ============ -->
+  <div class="hero min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+    <div class="flex-col hero-content lg:flex-row-reverse gap-8">
+      <img src="../Assets/activities.png" loading="lazy" class="w-5/6 lg:w-3/5 rounded-lg shadow-lg">
+      <div class="px-8 lg:px-0">
+        <h1 class="mb-4 text-5xl md:text-6xl font-bold text-gray-900">
+          Our Activities & Programs
+        </h1>
+        <p class="text-lg md:text-xl mb-8 text-gray-700 max-w-xl">
+          Discover the inspiring work Nyasa does through various community programs, educational initiatives, and outreach activities.
+        </p>
+        <a href="#upcoming" class="btn btn-primary btn-lg">
+          Explore Activities
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ UPCOMING ACTIVITIES SLIDER ============ -->
+  <section id="upcoming" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Upcoming Activities</h2>
+        <p class="text-lg text-gray-600">Be part of our exciting upcoming events</p>
+      </div>
+
+      <div class="relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl">
+        <!-- Slider container -->
+        <div class="upcoming-slider-container">
+          <div class="upcoming-slider">
+            <!-- Slide 1 -->
+            <div class="upcoming-slide active">
+              <img src="../Assets/activities/Summer_Camp/backgroundimg.jpg" alt="Summer Camp" class="w-full h-96 object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end">
+                <div class="p-8 w-full bg-gradient-to-t from-black to-transparent">
+                  <h3 class="text-4xl font-bold text-white mb-2">Summer Camp 2025</h3>
+                  <p class="text-lg text-gray-200">Join us for an unforgettable summer experience with activities, learning, and fun!</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="upcoming-slide">
+              <img src="../Assets/activities/Pathway_Program/background1.jpg" alt="Pathway Program" class="w-full h-96 object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end">
+                <div class="p-8 w-full bg-gradient-to-t from-black to-transparent">
+                  <h3 class="text-4xl font-bold text-white mb-2">Pathway to Schooling</h3>
+                  <p class="text-lg text-gray-200">Support education initiatives for underprivileged children in our community.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="upcoming-slide">
+              <img src="../Assets/activities/Distribution_Drive/backgroun.png" alt="Distribution Drive" class="w-full h-96 object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end">
+                <div class="p-8 w-full bg-gradient-to-t from-black to-transparent">
+                  <h3 class="text-4xl font-bold text-white mb-2">Distribution Drive</h3>
+                  <p class="text-lg text-gray-200">Distributing essential items and clothing to those in need.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation arrows -->
+          <button class="slider-arrow slider-prev" onclick="changeSlide(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button class="slider-arrow slider-next" onclick="changeSlide(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <!-- Slider indicators -->
+          <div class="slider-indicators">
+            <button class="indicator active" onclick="goToSlide(0)"></button>
+            <button class="indicator" onclick="goToSlide(1)"></button>
+            <button class="indicator" onclick="goToSlide(2)"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ONGOING PROGRAMS SECTION ============ -->
+  <section id="ongoing" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Ongoing Programs</h2>
+        <p class="text-lg text-gray-600">Discover our flagship initiatives making a difference in the community</p>
+      </div>
+
+      <!-- Programs Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- PATHWAY PROGRAM -->
+        <div class="program-card">
+          <div class="program-image-container">
+            <img src="../Assets/activities/Pathway to Schooling.png" alt="Pathway to Schooling" class="program-image">
+            <div class="program-image-overlay">
+              <span class="text-white font-semibold">Learn More</span>
+            </div>
+          </div>
+          <div class="program-content">
+            <h3 class="program-title">Pathway to Schooling</h3>
+            <p class="program-description">
+              Supporting underprivileged children's education through mentorship, resources, and continuous guidance to ensure a brighter future.
+            </p>
+            <div class="program-dropdown">
+              <button class="dropdown-trigger" onclick="toggleYearDropdown(this)">
+                <span>Select Year</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </button>
+              <div class="year-dropdown-menu">
+                <button class="year-option" onclick="loadYearContent('pathway', 2025)">2025</button>
+                <button class="year-option" onclick="loadYearContent('pathway', 2024)">2024</button>
+                <button class="year-option" onclick="loadYearContent('pathway', 2023)">2023</button>
+                <button class="year-option" onclick="loadYearContent('pathway', 2022)">2022</button>
+                <button class="year-option" onclick="loadYearContent('pathway', 2021)">2021</button>
+                <button class="year-option" onclick="loadYearContent('pathway', 2020)">2020</button>
+              </div>
+            </div>
+            <div class="year-content hidden" id="pathway-content"></div>
+          </div>
+        </div>
+
+        <!-- AKANKSHA PROGRAM -->
+        <div class="program-card">
+          <div class="program-image-container">
+            <img src="../Assets/activities/Akanksha.png" alt="Akanksha" class="program-image">
+            <div class="program-image-overlay">
+              <span class="text-white font-semibold">Learn More</span>
+            </div>
+          </div>
+          <div class="program-content">
+            <h3 class="program-title">Akanksha</h3>
+            <p class="program-description">
+              Fulfilling dreams and aspirations of children through scholarships, mentorship programs, and holistic development initiatives.
+            </p>
+            <div class="program-dropdown">
+              <button class="dropdown-trigger" onclick="toggleYearDropdown(this)">
+                <span>Select Year</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </button>
+              <div class="year-dropdown-menu">
+                <button class="year-option" onclick="loadYearContent('akanksha', 2025)">2025</button>
+                <button class="year-option" onclick="loadYearContent('akanksha', 2024)">2024</button>
+                <button class="year-option" onclick="loadYearContent('akanksha', 2023)">2023</button>
+                <button class="year-option" onclick="loadYearContent('akanksha', 2022)">2022</button>
+                <button class="year-option" onclick="loadYearContent('akanksha', 2021)">2021</button>
+                <button class="year-option" onclick="loadYearContent('akanksha', 2020)">2020</button>
+              </div>
+            </div>
+            <div class="year-content hidden" id="akanksha-content"></div>
+          </div>
+        </div>
+
+        <!-- CHETNA PROGRAM -->
+        <div class="program-card">
+          <div class="program-image-container">
+            <img src="../Assets/activities/Sanjeevani/background1.jpg" alt="Chetna" class="program-image">
+            <div class="program-image-overlay">
+              <span class="text-white font-semibold">Learn More</span>
+            </div>
+          </div>
+          <div class="program-content">
+            <h3 class="program-title">Chetna</h3>
+            <p class="program-description">
+              Awareness campaigns and health initiatives promoting well-being, education, and community engagement for sustainable development.
+            </p>
+            <div class="program-dropdown">
+              <button class="dropdown-trigger" onclick="toggleYearDropdown(this)">
+                <span>Select Year</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </button>
+              <div class="year-dropdown-menu">
+                <button class="year-option" onclick="loadYearContent('chetna', 2025)">2025</button>
+                <button class="year-option" onclick="loadYearContent('chetna', 2024)">2024</button>
+                <button class="year-option" onclick="loadYearContent('chetna', 2023)">2023</button>
+                <button class="year-option" onclick="loadYearContent('chetna', 2022)">2022</button>
+                <button class="year-option" onclick="loadYearContent('chetna', 2021)">2021</button>
+                <button class="year-option" onclick="loadYearContent('chetna', 2020)">2020</button>
+              </div>
+            </div>
+            <div class="year-content hidden" id="chetna-content"></div>
+          </div>
+        </div>
+
+        <!-- DISTRIBUTION DRIVE -->
+        <div class="program-card">
+          <div class="program-image-container">
+            <img src="../Assets/activities/distribution.png" alt="Distribution Drive" class="program-image">
+            <div class="program-image-overlay">
+              <span class="text-white font-semibold">Learn More</span>
+            </div>
+          </div>
+          <div class="program-content">
+            <h3 class="program-title">Distribution Drive</h3>
+            <p class="program-description">
+              Regular distribution of clothing, books, stationery, and essential items to support underprivileged communities in our region.
+            </p>
+            <div class="program-dropdown">
+              <button class="dropdown-trigger" onclick="toggleYearDropdown(this)">
+                <span>Select Year</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </button>
+              <div class="year-dropdown-menu">
+                <button class="year-option" onclick="loadYearContent('distribution', 2025)">2025</button>
+                <button class="year-option" onclick="loadYearContent('distribution', 2024)">2024</button>
+                <button class="year-option" onclick="loadYearContent('distribution', 2023)">2023</button>
+                <button class="year-option" onclick="loadYearContent('distribution', 2022)">2022</button>
+                <button class="year-option" onclick="loadYearContent('distribution', 2021)">2021</button>
+                <button class="year-option" onclick="loadYearContent('distribution', 2020)">2020</button>
+              </div>
+            </div>
+            <div class="year-content hidden" id="distribution-content"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAST ACTIVITIES SECTION ============ -->
+  <section id="past-activities" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Past Activities & Events</h2>
+        <p class="text-lg text-gray-600">Celebrating our memorable past events that made a difference</p>
+      </div>
+
+      <!-- Activities Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Ganesh Chaturthi Celebration -->
+        <div class="activity-card">
+          <div class="activity-image">
+            <img src="../Assets/activities/Ganesh_Chaturthi.png" alt="Ganesh Chaturthi Celebration">
+          </div>
+          <div class="activity-body">
+            <h3 class="activity-title">Ganesh Chaturthi Celebration</h3>
+            <p class="activity-text">
+              We celebrated the auspicious festival of Ganesh Chaturthi with our children and community members. The event included cultural performances, traditional activities, and created a joyous atmosphere for all participants.
+            </p>
+            <div class="activity-meta">
+              <span class="activity-tag">Cultural Event</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wildlife Week Celebration -->
+        <div class="activity-card">
+          <div class="activity-image">
+            <img src="../Assets/activities/Wildlife_celeberation.png" alt="Wildlife Week Celebration">
+          </div>
+          <div class="activity-body">
+            <h3 class="activity-title">Wildlife Week Celebration</h3>
+            <p class="activity-text">
+              Our wildlife week celebration aimed to raise awareness about environmental conservation and the importance of protecting our natural habitats. Children participated in educational activities and outdoor programs.
+            </p>
+            <div class="activity-meta">
+              <span class="activity-tag">Environmental</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Taare Zameen Par -->
+        <div class="activity-card">
+          <div class="activity-image">
+            <img src="../Assets/activities/Taare_Zameen_Par.png" alt="Taare Zameen Par">
+          </div>
+          <div class="activity-body">
+            <h3 class="activity-title">Taare Zameen Par Screening</h3>
+            <p class="activity-text">
+              A special screening of the inspirational film "Taare Zameen Par" was organized for our children. The movie sparked meaningful discussions about learning differences and the importance of understanding and support.
+            </p>
+            <div class="activity-meta">
+              <span class="activity-tag">Educational</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Teaching Session -->
+        <div class="activity-card">
+          <div class="activity-image">
+            <img src="../Assets/activities/Special_Teaching.png" alt="Special Teaching Session">
+          </div>
+          <div class="activity-body">
+            <h3 class="activity-title">Special Teaching Sessions</h3>
+            <p class="activity-text">
+              Our specialized teaching sessions cover topics beyond regular curriculum. Expert volunteers conduct interactive sessions on subjects ranging from science, arts, computer skills to personality development.
+            </p>
+            <div class="activity-meta">
+              <span class="activity-tag">Educational</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sports & Recreation -->
+        <div class="activity-card">
+          <div class="activity-image">
+            <img src="../Assets/activities/dailysprot.jpg" alt="Sports Activities">
+          </div>
+          <div class="activity-body">
+            <h3 class="activity-title">Sports & Recreation</h3>
+            <p class="activity-text">
+              Regular sports sessions are conducted to keep the children active and healthy. These activities include football, cricket, games, and outdoor play that promote physical fitness and team spirit.
+            </p>
+            <div class="activity-meta">
+              <span class="activity-tag">Sports</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Umeed Programs -->
+        <div class="activity-card">
+          <div class="activity-image">
+            <img src="../Assets/activities/Umeed.png" alt="Umeed Programs">
+          </div>
+          <div class="activity-body">
+            <h3 class="activity-title">Umeed Programs</h3>
+            <p class="activity-text">
+              Hope and aspirations drive our Umeed programs where we work on skill development, career guidance, and mentorship for underprivileged youth. Creating pathways to brighter futures.
+            </p>
+            <div class="activity-meta">
+              <span class="activity-tag">Skill Development</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="activities-redesign.js"></script>
+
+  <script>
+    // Load navigation
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+
+    // Load footer
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+  </script>
+
+</body>
+
+</html>
